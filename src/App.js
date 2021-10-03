@@ -1,4 +1,4 @@
-import FitnessActivities from "./components/FitnessActivities";
+import FitnessActivities from './components/Activities/FitnessActivities';
 
 function App() {
 
