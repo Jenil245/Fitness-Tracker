@@ -1,5 +1,5 @@
-import FitnessItem from "./FitnessItem";
-import Card from "./Card";
+import ActivityItem from './ActivityItem';
+import Card from '../UI/Card';
 import './FitnessActivities.css'
 
 function FitnessActivities() {
@@ -34,7 +34,7 @@ function FitnessActivities() {
     return (
         <Card className="fitness">
           {activities.map(activity => 
-            <FitnessItem 
+            <ActivityItem 
             date = {activity.date}
             activityTitle ={activity.title}
             activityMinutes = {activity.minutes} />

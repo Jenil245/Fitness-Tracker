@@ -1,4 +1,4 @@
-.fitness-date {
+.activity-date {
     display: flex;
     flex-direction: column;
     width: 5.5rem;
@@ -11,16 +11,16 @@
     justify-content: center;
   }
   
-  .fitness-date__month {
+  .activity-date__month {
     font-size: 0.75rem;
     font-weight: bold;
   }
   
-  .fitness-date__year {
+  .activity-date__year {
     font-size: 0.75rem;
   }
   
-  .fitness-date__day {
+  .activity-date__day {
     font-size: 1.5rem;
     font-weight: bold;
   }
