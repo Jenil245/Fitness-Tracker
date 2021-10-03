@@ -9,7 +9,7 @@ function FitnessItem(props) {
       <div className="fitness-item__description">
         <h2> {props.activityTitle} </h2>
         <div className="fitness-item__minutes">
-          {props.activityMinutes} Mins
+          {props.activityMinutes} Minutes
         </div>
       </div>
     </Card>
