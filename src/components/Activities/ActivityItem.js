@@ -3,6 +3,7 @@ import Card from '../UI/Card';
 import './ActivityItem.css';
 
 function ActivityItem(props) {
+  
   return (
     <Card className="activity-item">
       <ActivityDate date={props.date} />

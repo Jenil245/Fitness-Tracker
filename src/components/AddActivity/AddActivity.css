@@ -22,8 +22,8 @@
   
   .new-activity button:hover,
   .new-activity button:active {
-    background-color: #510674;
-    border-color: #510674;
+    background-color: #02492e;
+    border-color: #05351a;
   }
   
   .new-activity button.alternative {
@@ -34,5 +34,5 @@
   
   .new-activity button.alternative:hover,
   .new-activity button.alternative:active {
-    background-color: #ddb3f8;
+    background-color: #02492e;
   }
