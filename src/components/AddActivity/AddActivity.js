@@ -1,10 +1,19 @@
 import './AddActivity.css';
 import ActivityForm from './ActivityForm'
 
-function AddActivity() {
+function AddActivity(props) {
+
+    const saveNewActivityHandler = (activityItem) => {
+        const newActivityItem = {
+            ...activityItem,
+            id: Math.random().toString(),
+        }
+        props.onAddNewActivity(newActivityItem)
+    }
+
     return (
         <div className="new-activity">
-            <ActivityForm />
+            <ActivityForm onSaveNewActivity={saveNewActivityHandler} />
         </div>
     )
 };

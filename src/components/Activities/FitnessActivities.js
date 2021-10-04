@@ -1,49 +1,38 @@
 import ActivityItem from './ActivityItem';
+import FilterActivities from './FilterActivities';
+import weekOfTheMonth from '../Utils/getWeekDay'
 import Card from '../UI/Card';
 import './FitnessActivities.css'
 import { useState } from 'react';
 
 
-function FitnessActivities() {
-    const activities = [
-        {
-          id: "e1",
-          title: "Yoga",
-          minutes: 30,
-          date: new Date(2020, 7, 14),
-        },
-        {
-          id: "e2",
-          title: "Yoga",
-          minutes: 38,
-          date: new Date(2021, 2, 12),
-        },
-        {
-          id: "e3",
-          title: "Weight Exercise",
-          minutes: 60,
-          date: new Date(2021, 2, 28),
-        },
-        {
-          id: "e4",
-          title: "Meditation",
-          minutes: 12,
-          date: new Date(2021, 5, 12),
-        },
-      ];
+function FitnessActivities(props) {
 
-      const [allActivities, setAllActivities] = useState(activities)
+      const [week, setWeek] = useState('1')
 
+      const weekFilterHandler = (selectedWeek) => {
+        setWeek(selectedWeek)
+      }
+
+      const filteredActivities = props.allActivities.filter(activity => {
+        return weekOfTheMonth(activity.date) === week
+      })
 
     return (
+          
         <Card className="fitness">
-          {activities.map(activity => 
+
+          <FilterActivities selectedWeek={week} onWeekFilter={weekFilterHandler} />
+
+          {props.allActivities.map(activity => 
             <ActivityItem 
+            key = {activity.id}
             date = {activity.date}
             activityTitle ={activity.title}
-            activityDuration = {activity.minutes} />
+            activityDuration = {activity.duration} />
             )
           }
+
         </Card>
     )
 }

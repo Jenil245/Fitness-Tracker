@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import './ActivityForm.css'
 
-function ActivityForm() {
+function ActivityForm(props) {
     const [titleChange, setTitleChange] = useState("")
     const [durationChange, setDurationChange] = useState("")
     const [dateChange, setDateChange] = useState("")
 
-    const submitHandler = (event) => {
+    const formSubmitHandler = (event) => {
         event.preventDefault()
 
         const activityItem = {
@@ -14,6 +14,8 @@ function ActivityForm() {
             duration: durationChange,
             date: new Date(dateChange)
         }
+
+        props.onSaveNewActivity(activityItem)
 
         setTitleChange("")
         setDurationChange("")
@@ -34,7 +36,7 @@ function ActivityForm() {
 
 
     return (
-        <form onSubmit={submitHandler}>
+        <form onSubmit={formSubmitHandler}>
             <div className="new-activity__controls">
                 <div className="new-activity__control">
                     <label>Title</label>
