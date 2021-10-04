@@ -1,12 +1,13 @@
 import FitnessActivities from './components/Activities/FitnessActivities';
+import AddActivity from './components/AddActivity/AddActivity';
+
 
 function App() {
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div>
+        <AddActivity />
         <FitnessActivities />
-      </header>
     </div>
   );
 }

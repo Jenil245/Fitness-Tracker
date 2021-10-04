@@ -1,6 +1,8 @@
 import ActivityItem from './ActivityItem';
 import Card from '../UI/Card';
 import './FitnessActivities.css'
+import { useState } from 'react';
+
 
 function FitnessActivities() {
     const activities = [
@@ -30,6 +32,8 @@ function FitnessActivities() {
         },
       ];
 
+      const [allActivities, setAllActivities] = useState(activities)
+
 
     return (
         <Card className="fitness">
@@ -37,7 +41,7 @@ function FitnessActivities() {
             <ActivityItem 
             date = {activity.date}
             activityTitle ={activity.title}
-            activityMinutes = {activity.minutes} />
+            activityDuration = {activity.minutes} />
             )
           }
         </Card>
