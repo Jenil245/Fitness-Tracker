@@ -3,6 +3,7 @@ import Card from '../UI/Card';
 import './FitnessActivities.css'
 import { useState } from 'react';
 
+
 function FitnessActivities() {
     const activities = [
         {

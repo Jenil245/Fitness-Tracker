@@ -1,6 +1,7 @@
 import FitnessActivities from './components/Activities/FitnessActivities';
 import AddActivity from './components/AddActivity/AddActivity';
 
+
 function App() {
 
   return (
