@@ -8,12 +8,13 @@ function FilterActivities(props) {
   return (
     <div className="fitness-filter">
       <div className="fitness-filter__control">
-        <label>Filter by year</label>
+        <label>Filter by Week</label>
         <select value={props.selectedWeek} onChange={weekOptionChangeHandler}>
-          <option value="first">Week 1</option>
-          <option value="second">Week 2</option>
-          <option value="third">Week 3</option>
-          <option value="fourth">Week 4</option>
+          <option value="1">Week 1</option>
+          <option value="2">Week 2</option>
+          <option value="3">Week 3</option>
+          <option value="4">Week 4</option>
+          <option value="5">Week 5</option>
         </select>
       </div>
     </div>

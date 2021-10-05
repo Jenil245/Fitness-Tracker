@@ -19,6 +19,18 @@ function App() {
       date: new Date(2021, 2, 12),
     },
     {
+      id: "e7",
+      title: "Weight Lifting",
+      duration: 10,
+      date: new Date(2020, 7, 3),
+    },
+    {
+      id: "e8",
+      title: "Weight Lifting",
+      duration: 15,
+      date: new Date(2021, 2, 6),
+    },
+    {
       id: "e3",
       title: "Weight Exercise",
       duration: 60,
