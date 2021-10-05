@@ -1,9 +1,10 @@
 import ActivityList from "./ActivityList";
 import FilterActivities from "./FilterActivities";
-import { weekOfTheMonth } from "../Utils/getWeekFromDate";
 import Card from "../UI/Card";
-import "./FitnessActivities.css";
+import { weekOfTheMonth } from "../Utils/getWeekFromDate";
 import { useState } from "react";
+import "./FitnessActivities.css";
+
 
 function FitnessActivities(props) {
   const [week, setWeek] = useState("1");

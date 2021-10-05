@@ -5,7 +5,7 @@ function ActivityForm(props) {
     const [titleChange, setTitleChange] = useState("")
     const [durationChange, setDurationChange] = useState("")
     const [dateChange, setDateChange] = useState("")
-
+    
     const formSubmitHandler = (event) => {
         event.preventDefault()
 
@@ -17,9 +17,11 @@ function ActivityForm(props) {
 
         props.onSaveNewActivity(activityItem)
 
-        setTitleChange("")
-        setDurationChange("")
-        setDateChange("")
+        formStatusHandler()
+    }
+
+    const formStatusHandler = () => {
+        props.onChangeStatus()
     }
 
     const titleChangeHandler = (event) => {
@@ -33,6 +35,7 @@ function ActivityForm(props) {
     const dateChangeHandler = (event) => {
         setDateChange(event.target.value)
     }
+
 
 
     return (
@@ -52,6 +55,7 @@ function ActivityForm(props) {
                 </div>
             </div>
             <div className="new-activity__actions">
+                <button onClick={formStatusHandler}>Cancel</button>
                 <button type="submit">Add Activity</button>
             </div>
         </form>

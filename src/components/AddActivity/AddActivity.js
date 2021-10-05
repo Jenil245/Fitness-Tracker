@@ -1,7 +1,21 @@
-import './AddActivity.css';
+import { useState } from 'react';
 import ActivityForm from './ActivityForm'
+import './AddActivity.css';
 
 function AddActivity(props) {
+
+    const [addActivityStatus, setAddActivityStatus] = useState(false)
+
+    const trueActivityStatusHandler = () => setAddActivityStatus(true)
+    const falseActivityStatusHandler = () => setAddActivityStatus(false)
+
+    if (!addActivityStatus) {
+        return (
+            <div className="new-activity">
+                <button onClick={trueActivityStatusHandler}>New Activity</button>
+            </div>
+        )
+    }
 
     const saveNewActivityHandler = (activityItem) => {
         const newActivityItem = {
@@ -13,7 +27,7 @@ function AddActivity(props) {
 
     return (
         <div className="new-activity">
-            <ActivityForm onSaveNewActivity={saveNewActivityHandler} />
+            <ActivityForm onSaveNewActivity={saveNewActivityHandler}  onChangeStatus={falseActivityStatusHandler} />
         </div>
     )
 };
