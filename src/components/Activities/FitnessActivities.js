@@ -1,5 +1,6 @@
 import ActivityList from "./ActivityList";
 import FilterActivities from "./FilterActivities";
+import ActivitiesChart from "./ActivitiesChart";
 import Card from "../UI/Card";
 import { weekOfTheMonth } from "../Utils/getWeekFromDate";
 import { useState } from "react";
@@ -20,6 +21,8 @@ function FitnessActivities(props) {
   return (
     <Card className="fitness">
       <FilterActivities selectedWeek={week} onWeekFilter={weekFilterHandler} />
+
+      <ActivitiesChart activities={filteredActivities} />
 
       <ActivityList filteredActivities={filteredActivities} />
     </Card>
