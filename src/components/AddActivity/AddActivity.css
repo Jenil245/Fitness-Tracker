@@ -22,12 +22,12 @@
 
 .new-activity button:hover,
 .new-activity button:active {
-  background-color: #02492e;
+  background-color: #021f14;
   border-color: #05351a;
 }
 
 .new-activity button.alternative {
-  color: #220131;
+  color: #013e46;
   border-color: transparent;
   background-color: transparent;
 }
