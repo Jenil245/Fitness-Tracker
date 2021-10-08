@@ -50,10 +50,16 @@ function App() {
     setAllActivities(prevActivities => [newActivity,...prevActivities])
   }
 
+  const deleteActivityHandler = (activityId) => {
+    console.log("ind delete",activityId)
+    setAllActivities(prevActivities => prevActivities.filter((activity) => activity.id!==activityId))
+    console.log(allActivities)
+  }
+
   return (
     <div>
         <AddActivity onAddNewActivity={addNewActivityHandler} />
-        <FitnessActivities allActivities={allActivities} />
+        <FitnessActivities allActivities={allActivities} onDelete={deleteActivityHandler}/>
     </div>
   );
 }

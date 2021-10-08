@@ -34,6 +34,10 @@
   border-radius: 12px;
 }
 
+.activity-item button {
+  color: red;
+}
+
 @media (min-width: 580px) {
   .activity-item__description {
     flex-direction: row;

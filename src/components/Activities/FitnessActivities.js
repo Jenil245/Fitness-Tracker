@@ -24,7 +24,7 @@ function FitnessActivities(props) {
 
       <ActivitiesChart activities={filteredActivities} />
 
-      <ActivityList filteredActivities={filteredActivities} />
+      <ActivityList filteredActivities={filteredActivities} onDelete={props.onDelete}/>
     </Card>
   );
 }

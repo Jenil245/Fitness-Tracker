@@ -15,9 +15,11 @@ function ActivityList(props) {
       {props.filteredActivities.map((activity) => (
         <ActivityItem
           key={activity.id}
+          id={activity.id}
           date={activity.date}
           activityTitle={activity.title}
           activityDuration={activity.duration}
+          onDelete={props.onDelete}
         />
       ))}
     </div>
