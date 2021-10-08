@@ -35,7 +35,22 @@
 }
 
 .activity-item button {
-  color: red;
+  font: inherit;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0.8rem 0.8rem;
+  border: 1px solid #050000;
+  background-color: #b80a04;
+  color: white;
+  border-radius: 12px;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.activity-item button:hover,
+.activity-item button:active {
+  background-color: #866805;
+  border-color: #c79201;
 }
 
 @media (min-width: 580px) {
@@ -54,4 +69,13 @@
     font-size: 1.25rem;
     padding: 0.5rem 1.5rem;
   }
+
+  .activity-item button {
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    margin-left: 1rem;
+    font-size: 1rem;
+  }
 }
+

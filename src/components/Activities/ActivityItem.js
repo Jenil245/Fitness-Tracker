@@ -18,7 +18,7 @@ function ActivityItem(props) {
           {props.activityDuration} Minutes
         </div>
       </div>
-      <button onClick={deleteActivityHandler}>DELETE</button>
+      <button onClick={deleteActivityHandler}>Delete</button>
     </Card>
   );
 }
