@@ -64,9 +64,9 @@ function App() {
 
     // })
 
-    editedActivity = allActivities.filter(activity => activity.id === activityData.id)
-    for (key in editedActivity) {
-      editedActivity.key = activityData.key
+    let editedActivity = allActivities.filter(activity => activity.id === activityData.id)
+    for (let key in editedActivity) {
+      editedActivity[key] = activityData[key]
     }
 
     setAllActivities(prevActivities => [...prevActivities,editedActivity])
