@@ -51,15 +51,31 @@ function App() {
   }
 
   const deleteActivityHandler = (activityId) => {
-    console.log("ind delete",activityId)
     setAllActivities(prevActivities => prevActivities.filter((activity) => activity.id!==activityId))
-    console.log(allActivities)
+  }
+
+  const changeActivityHandler = (activityData) => {
+
+    //   i = allActivities.findIndex(activity => activity.id === activityId)
+    //   for( key in allActivities[i]){
+
+
+    //   }
+
+    // })
+
+    editedActivity = allActivities.filter(activity => activity.id === activityData.id)
+    for (key in editedActivity) {
+      editedActivity.key = activityData.key
+    }
+
+    setAllActivities(prevActivities => [...prevActivities,editedActivity])
   }
 
   return (
     <div>
         <AddActivity onAddNewActivity={addNewActivityHandler} />
-        <FitnessActivities allActivities={allActivities} onDelete={deleteActivityHandler}/>
+        <FitnessActivities allActivities={allActivities} onDelete={deleteActivityHandler} onEdit={changeActivityHandler} />
     </div>
   );
 }

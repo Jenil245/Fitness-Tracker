@@ -20,6 +20,7 @@ function ActivityList(props) {
           activityTitle={activity.title}
           activityDuration={activity.duration}
           onDelete={props.onDelete}
+          onEdit={props.onEdit}
         />
       ))}
     </div>

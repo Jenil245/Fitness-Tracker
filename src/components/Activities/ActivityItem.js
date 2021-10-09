@@ -5,8 +5,16 @@ import './ActivityItem.css';
 function ActivityItem(props) {
   
   const deleteActivityHandler = () => {
-    console.log("in delete")
     props.onDelete(props.id)
+  }
+
+  const editActivityHandler = () => {
+    props.onEdit({
+      id:props.id,
+      date:props.date,
+      title:props.activityTitle,
+      duration:props.activityDuration
+    })
   }
 
   return (
@@ -18,6 +26,7 @@ function ActivityItem(props) {
           {props.activityDuration} Minutes
         </div>
       </div>
+      <button onClick={editActivityHandler}>Edit</button>
       <button onClick={deleteActivityHandler}>Delete</button>
     </Card>
   );
