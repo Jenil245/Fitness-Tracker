@@ -1,5 +1,5 @@
 import ActivityDate from './ActivityDate';
-import EditActivity from './EditActivity'
+import EditActivity from '../EditActivity/EditActivity'
 import Card from '../UI/Card';
 import { useState, Fragment } from 'react';
 import './ActivityItem.css';
@@ -12,8 +12,6 @@ function ActivityItem(props) {
     props.onDelete(props.id)
   }
 
-  console.log(editFlag)
-
   const editActivityHandler = () => {
 
     setEditFlag(true)
@@ -23,14 +21,12 @@ function ActivityItem(props) {
     //   title:props.activityTitle,
     //   duration:props.activityDuration
     // })
-
-    console.log("inside handler",editFlag)
   }
 
   return (
     <Fragment>
       {editFlag && (
-      <EditActivity activityData={props} editFlag={editFlag}/>
+      <EditActivity presentActivityData={props} />
       )}
 
     <Card className="activity-item">
