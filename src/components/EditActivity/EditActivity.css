@@ -1,0 +1,38 @@
+.edit-activity {
+  background-color: #59ad82;
+  padding: 1rem;
+  margin: 2rem auto;
+  width: 50rem;
+  max-width: 95%;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.edit-activity button {
+  font: inherit;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: 1px solid #05351a;
+  background-color: #02492e;
+  color: white;
+  border-radius: 12px;
+  margin-right: 1rem;
+}
+
+.edit-activity button:hover,
+.edit-activity button:active {
+  background-color: #021f14;
+  border-color: #05351a;
+}
+
+.edit-activity button.alternative {
+  color: #013e46;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.edit-activity button.alternative:hover,
+.edit-activity button.alternative:active {
+  background-color: #02492e;
+}

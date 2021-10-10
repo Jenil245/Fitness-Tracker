@@ -41,21 +41,21 @@ function EditActivityForm(props) {
 
     return (
         <form onSubmit={formSubmitHandler}>
-            <div className="new-activity__controls">
-                <div className="new-activity__control">
+            <div className="edit-activity__controls">
+                <div className="edit-activity__control">
                     <label>Title</label>
                     <input type="text" value={titleChange} onChange={titleChangeHandler} />
                 </div>
-                <div className="new-activity__control">
+                <div className="edit-activity__control">
                     <label>Duration</label>
                     <input type="number" value={durationChange} min='1' max='120' onChange={durationChangeHandler} />
                 </div>
-                <div className="new-activity__control">
+                <div className="edit-activity__control">
                     <label>Date</label>
                     <input type="date" value={dateChange} onChange={dateChangeHandler} />
                 </div>
             </div>
-            <div className="new-activity__actions">
+            <div className="edit-activity__actions">
                 <button onClick={formStatusHandler}>Cancel</button>
                 <button type="submit">Update Activity</button>
             </div>

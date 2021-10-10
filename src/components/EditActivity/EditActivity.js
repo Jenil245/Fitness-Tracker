@@ -1,10 +1,10 @@
-import EditActivityForm from '../EditActivity/EditActivityForm';
-import '../EditActivity/EditActivityForm.css'
+import EditActivityForm from './EditActivityForm';
+import './EditActivity.css'
 
 
 function EditActivity (props) {
     return (
-        <div>
+        <div className="edit-activity">
             <EditActivityForm presentActivityData={props.presentActivityData}/>
             Please Enter New Values
         </div>
