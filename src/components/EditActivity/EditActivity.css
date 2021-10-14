@@ -26,6 +26,16 @@
   border-color: #05351a;
 }
 
+.header {
+  color: white;
+  font-weight: bold;
+  background-color: black;
+  height: 40px;
+  padding-top: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .edit-activity button.alternative {
   color: #013e46;
   border-color: transparent;
@@ -36,3 +46,5 @@
 .edit-activity button.alternative:active {
   background-color: #02492e;
 }
+
+

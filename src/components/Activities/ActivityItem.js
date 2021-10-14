@@ -12,24 +12,33 @@ function ActivityItem(props) {
     props.onDelete(props.id)
   }
 
-  const editActivityHandler = () => {
+  const editActivityHandler = (editedActivityData) => {
 
+    props.onEdit({
+       id:props.id,
+       date:editedActivityData.date,
+       title:editedActivityData.title,
+       duration:editedActivityData.duration
+     })
+  }
+
+
+  const changeStatusFalseHandler = () => {
+    setEditFlag(false)
+  }
+
+  const changeStatusTrueHandler = () => {
     setEditFlag(true)
-    // props.onEdit({
-    //   id:props.id,
-    //   date:props.date,
-    //   title:props.activityTitle,
-    //   duration:props.activityDuration
-    // })
   }
 
   return (
     <Fragment>
       {editFlag && (
-      <EditActivity presentActivityData={props} />
+      <EditActivity presentActivityData={props} onEditActivity={editActivityHandler} onChangeStatus={changeStatusFalseHandler} />
       )}
 
-    <Card className="activity-item">
+    {/* <Card className={`activity-item ${editFlag && 'backdrop'}`}> */}
+    <Card className='activity-item'>
       <ActivityDate date={props.date} />
       <div className="activity-item__description">
         <h2> {props.activityTitle} </h2>
@@ -37,7 +46,7 @@ function ActivityItem(props) {
           {props.activityDuration} Minutes
         </div>
       </div>
-      <button onClick={editActivityHandler}>Edit</button>
+      <button onClick={changeStatusTrueHandler}>Edit</button>
       <button onClick={deleteActivityHandler}>Delete</button>
     </Card>
     </Fragment>

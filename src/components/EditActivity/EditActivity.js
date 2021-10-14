@@ -5,8 +5,8 @@ import './EditActivity.css'
 function EditActivity (props) {
     return (
         <div className="edit-activity">
-            <EditActivityForm presentActivityData={props.presentActivityData}/>
-            Please Enter New Values
+           <div className="header"> Please Enter New Values</div>
+            <EditActivityForm presentActivityData={props.presentActivityData} onEditActivity={props.onEditActivity} onChangeStatus={props.onChangeStatus} />
         </div>
     )
 }

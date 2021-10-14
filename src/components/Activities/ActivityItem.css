@@ -53,6 +53,14 @@
   border-color: #c79201;
 }
 
+.activity-item.backdrop {
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+
 @media (min-width: 580px) {
   .activity-item__description {
     flex-direction: row;

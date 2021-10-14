@@ -16,7 +16,7 @@ function EditActivityForm(props) {
             date: new Date(dateChange)
         }
 
-        props.onUpdateActivity(activityItem)
+        props.onEditActivity(activityItem)
 
         formStatusHandler()
     }
